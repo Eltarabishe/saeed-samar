@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Saeed &amp; Samar | Wedding Invitation</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#2a0e14;--bg2:#4a1823;--rose:#f2a8b9;--mauve:#b8667a;--wine:#8c4455;--deep:#6b2332;--gold:#d4af37;--ivory:#faf6f1;--ink:#2b1a1d;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);height:100%}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--ink);font-family:'Cormorant Garamond',Georgia,serif;font-size:20px;min-height:100%;overflow-x:hidden;
+background-image:radial-gradient(circle at 50% 0,var(--bg2),var(--bg) 70%);background-attachment:fixed}
+.pf{font-family:'Playfair Display',Georgia,serif}
+#petals{position:fixed;inset:0;pointer-events:none;z-index:1;overflow:hidden}
+.p{position:absolute;top:-30px;width:12px;height:16px;border-radius:70% 0 70% 0;opacity:.65;animation:fall linear infinite}
+@keyframes fall{to{transform:translate(var(--dx),110vh) rotate(540deg)}}
+#intro{position:fixed;inset:0;z-index:50;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;background:radial-gradient(circle at 50% 30%,var(--deep),var(--bg));transition:opacity 1s,visibility 1s;text-align:center;padding:24px;color:#fbeef1}
+#intro.gone{opacity:0;visibility:hidden}
+.env{position:relative;width:min(300px,78vw);height:200px;background:linear-gradient(160deg,var(--mauve),var(--wine));border-radius:6px;box-shadow:0 20px 50px #0008}
+.env:before{content:"";position:absolute;inset:0;background:linear-gradient(to bottom right,transparent 49.5%,#0003 50%) left/50% 100% no-repeat,linear-gradient(to bottom left,transparent 49.5%,#0003 50%) right/50% 100% no-repeat}
+.flap{position:absolute;top:0;left:0;right:0;height:105px;background:#d98a9b;clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:transform .9s}
+.seal{position:absolute;top:80px;left:50%;transform:translateX(-50%);width:54px;height:54px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#ff9db3,var(--deep));display:grid;place-items:center;color:#e8c9a0;font-size:22px;box-shadow:0 4px 12px #0007;z-index:2}
+#intro.open .flap{transform:rotateX(180deg)}
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;font:600 19px 'Playfair Display',Georgia,serif;letter-spacing:.5px;color:var(--ink);background:var(--gold);border:0;border-radius:40px;padding:17px 24px;cursor:pointer;text-decoration:none;box-shadow:0 8px 22px #d4af3755}
+.btn.alt{background:transparent;color:#f6e3c0;border:1.5px solid var(--gold);box-shadow:none}
+#intro .btn{width:auto;padding:14px 38px}
+main{position:relative;z-index:2;max-width:520px;margin:0 auto;padding:30px 20px 40px;display:flex;flex-direction:column;gap:20px}
+.box{background:var(--ivory);border-radius:28px;padding:30px 20px;text-align:center;box-shadow:0 14px 40px #0006}
+.mono{width:78px;height:78px;margin:0 auto 14px;border:2px solid var(--gold);border-radius:22px 22px 22px 22px / 30px 30px 30px 30px;display:grid;place-items:center;color:var(--gold);font-size:30px;transform:rotate(45deg)}
+.mono span{transform:rotate(-45deg)}
+h1{font-size:clamp(30px,9vw,40px);line-height:1.2;font-weight:700}
+.names{font-size:clamp(34px,11vw,50px);color:var(--deep);margin:10px 0;font-weight:600;font-style:italic}
+.msg{background:#fff;border-radius:20px;padding:20px 16px;margin-top:14px;line-height:1.5;box-shadow:0 4px 18px #0001}
+.msg small{display:block;font-size:18px;margin-top:10px;opacity:.85}
+.info{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+.info div{background:#fff;border-radius:18px;padding:14px 4px;box-shadow:0 4px 14px #0001}
+.info i{display:block;font-style:normal;font-size:13px;letter-spacing:2px;margin-bottom:6px;opacity:.7}
+.info b{font:600 17px/1.25 'Playfair Display',Georgia,serif}
+.cd{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.cd div{background:linear-gradient(160deg,var(--deep),var(--bg2));border:1px solid #d4af3755;border-radius:16px;padding:14px 2px;text-align:center;color:var(--rose)}
+.cd b{display:block;font:600 30px 'Playfair Display',Georgia,serif}
+.cd i{font-style:normal;font-size:13px;letter-spacing:1.5px;color:#f6e3c0}
+.title{font:400 32px 'Cormorant Garamond',Georgia,serif;letter-spacing:3px;color:#1f4d3e;color:var(--deep);margin-bottom:16px}
+.row{display:flex;gap:16px;align-items:center;text-align:left;margin:18px 0}
+.row em{font-style:normal;font-size:28px;width:34px;text-align:center}
+.row i{display:block;font-style:normal;letter-spacing:2px;font-size:14px;opacity:.7}
+.row b{font:600 22px/1.3 'Playfair Display',Georgia,serif}
+.sw{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+.sw div{background:#fff;border-radius:20px;padding:12px 12px 16px;box-shadow:0 4px 14px #0001}
+.sw span{display:block;height:92px;border-radius:14px;border:1px solid #0002;margin-bottom:10px}
+.sw b{display:block;font:600 19px 'Playfair Display',Georgia,serif}
+.sw small{font-size:16px;opacity:.8}
+.sheet{position:fixed;inset:0;z-index:40;background:#1a0709ee;display:none;overflow-y:auto;padding:calc(18px + env(safe-area-inset-top,0px)) 16px calc(24px + env(safe-area-inset-bottom,0px))}
+.sheet.on{display:block}
+.sheet .box{max-width:520px;margin:0 auto;position:relative}
+.x{position:absolute;top:12px;right:14px;width:40px;height:40px;border:0;background:none;font-size:30px;color:var(--ink);cursor:pointer}
+.mute{position:fixed;z-index:60;left:14px;top:calc(14px + env(safe-area-inset-top,0px));width:44px;height:44px;border-radius:50%;border:1px solid var(--gold);background:#2a0e14cc;color:var(--gold);font-size:20px;cursor:pointer;display:none}
+.mute.on{display:block}
+footer{position:relative;z-index:2;text-align:center;color:var(--mauve);font-size:16px;padding:0 0 36px;letter-spacing:1px}
+</style>
+</head>
+<body>
+<div id="petals"></div>
+
+<div id="intro">
+  <p class="pf" style="font-size:22px;color:#f6e3c0;letter-spacing:3px">YOU ARE INVITED</p>
+  <div class="env"><div class="flap"></div><div class="seal">&hearts;</div></div>
+  <p style="font-size:24px;font-style:italic;color:var(--rose)">Saeed &amp; Samar</p>
+  <button class="btn" id="openBtn">Open Invitation</button>
+</div>
+
+<button class="mute" id="mute" aria-label="Toggle music">&#9834;</button>
+
+<main>
+  <div class="box">
+    <div class="mono pf"><span>S&amp;S</span></div>
+    <h1 class="pf">Together with their families</h1>
+    <p class="names pf">Saeed &amp; Samar</p>
+    <div class="msg">We joyfully invite you to celebrate our love and the beginning of our forever.<small>Your presence will make our day even more special.</small></div>
+    <div class="info">
+      <div><i>DATE</i><b>Oct 31</b></div>
+      <div><i>TIME</i><b>6:00 PM</b></div>
+      <div><i>LOCATION</i><b>Villa El Wazir</b></div>
+    </div>
+  </div>
+
+  <div class="cd"><div><b id="d">0</b><i>DAYS</i></div><div><b id="h">0</b><i>HOURS</i></div><div><b id="m">0</b><i>MINS</i></div><div><b id="s">0</b><i>SECS</i></div></div>
+
+  <button class="btn" data-open="loc">&#128205;&nbsp; Location</button>
+  <button class="btn alt" data-open="dress">&#10084;&nbsp; Dress Code</button>
+  <a class="btn alt" id="rsvp" href="#" style="display:none">RSVP on WhatsApp</a>
+</main>
+<footer>We can't wait to celebrate with you &hearts;</footer>
+
+<div class="sheet" id="loc"><div class="box">
+  <button class="x" data-close>&times;</button>
+  <h2 class="title">The Venue</h2>
+  <div class="row"><em>&#128197;</em><div><i>DATE</i><b>Saturday, October 31, 2026</b></div></div>
+  <div class="row"><em>&#128339;</em><div><i>TIME</i><b>6:00 PM</b></div></div>
+  <div class="row"><em>&#128205;</em><div><i>LOCATION</i><b>Villa El Wazir</b><span>Corniche El Warraq, Egypt</span></div></div>
+  <a class="btn" href="https://maps.app.goo.gl/fT4Q6xCohuyb2ivVA" target="_blank" rel="noopener">Open in Google Maps</a>
+</div></div>
+
+<div class="sheet" id="dress"><div class="box">
+  <button class="x" data-close>&times;</button>
+  <h2 class="title">Dress Code</h2>
+  <p>Please join us in our color harmony with elegant tones of pink, rose and burgundy.</p>
+  <div class="sw">
+    <div><span style="background:#f2a8b9"></span><b>Blush Pink</b><small>Soft &amp; Romantic</small></div>
+    <div><span style="background:#d98a9b"></span><b>Rose</b><small>Sweet &amp; Graceful</small></div>
+    <div><span style="background:#b8667a"></span><b>Dusty Mauve</b><small>Warm &amp; Elegant</small></div>
+    <div><span style="background:#8c4455"></span><b>Wine Berry</b><small>Rich &amp; Refined</small></div>
+    <div><span style="background:#6b2332"></span><b>Burgundy</b><small>Deep &amp; Bold</small></div>
+    <div><span style="background:#3a1410"></span><b>Dark Maroon</b><small>Classic &amp; Timeless</small></div>
+  </div>
+</div></div>
+
+<script>
+// ===== Settings =====
+var WHATSAPP = "";   // WhatsApp number for RSVP, international format without +, e.g. 201001234567
+var MUSIC_URL = "";  // Optional: your own MP3 file (e.g. "music.mp3") if you host it next to this page. Empty = built-in soft piano loop
+var TARGET = new Date("2026-10-31T18:00:00+02:00").getTime();
+
+(function(){var c=document.getElementById('petals'),cols=['#f2a8b9','#d98a9b','#b8667a','#8c4455'];
+for(var i=0;i<16;i++){var p=document.createElement('i');p.className='p';
+p.style.left=Math.random()*100+'%';p.style.background=cols[i%4];
+p.style.setProperty('--dx',(Math.random()*120-60)+'px');
+p.style.animationDuration=(9+Math.random()*9)+'s';p.style.animationDelay=(-Math.random()*14)+'s';
+p.style.transform='scale('+(.6+Math.random()*.9)+')';c.appendChild(p);}})();
+
+function tick(){var t=Math.max(0,TARGET-Date.now()),s=Math.floor(t/1000);
+document.getElementById('d').textContent=Math.floor(s/86400);
+document.getElementById('h').textContent=Math.floor(s%86400/3600);
+document.getElementById('m').textContent=Math.floor(s%3600/60);
+document.getElementById('s').textContent=s%60;}
+tick();setInterval(tick,1000);
+
+document.querySelectorAll('[data-open]').forEach(function(b){b.onclick=function(){document.getElementById(b.dataset.open).classList.add('on')}});
+document.querySelectorAll('.sheet').forEach(function(s){s.onclick=function(e){if(e.target===s)s.classList.remove('on')}});
+document.querySelectorAll('[data-close]').forEach(function(b){b.onclick=function(){b.closest('.sheet').classList.remove('on')}});
+
+if(WHATSAPP){var r=document.getElementById('rsvp');r.style.display='flex';
+r.href='https://wa.me/'+WHATSAPP+'?text='+encodeURIComponent("I'll be attending Saeed & Samar's wedding \u2764");r.target='_blank';}
+
+var ctx,master,playing=false,timer,nextT=0,step=0,audioEl=null;
+var chords=[[220,261.63,329.63],[174.61,220,261.63],[261.63,329.63,392],[196,246.94,293.66]];
+var pat=[0,1,2,1,2,1,2,1];
+function note(f,t,d,v,type){var o=ctx.createOscillator(),g=ctx.createGain();o.type=type;o.frequency.value=f;
+g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(v,t+.04);g.gain.exponentialRampToValueAtTime(.0001,t+d);
+o.connect(g);g.connect(master);o.start(t);o.stop(t+d+.05);}
+function sched(){while(nextT<ctx.currentTime+.6){var ch=chords[Math.floor(step/8)%4],k=step%8;
+note(ch[pat[k]]*2,nextT,1.1,.09,'sine');
+if(k===0){note(ch[0]/2,nextT,3.2,.12,'triangle');ch.forEach(function(f){note(f,nextT,3.2,.03,'sine')});}
+if(k===4)note(ch[2]*4,nextT,1.6,.035,'sine');
+nextT+=.42;step++;}}
+function startMusic(){
+ if(MUSIC_URL){audioEl=audioEl||new Audio(MUSIC_URL);audioEl.loop=true;audioEl.play().catch(function(){});playing=true;return;}
+ var AC=window.AudioContext||window.webkitAudioContext;if(!AC)return;
+ if(!ctx){ctx=new AC();master=ctx.createGain();master.gain.value=.8;master.connect(ctx.destination);}
+ ctx.resume();nextT=ctx.currentTime+.1;sched();timer=setInterval(sched,200);playing=true;}
+function stopMusic(){if(audioEl)audioEl.pause();if(ctx){clearInterval(timer);ctx.suspend();}playing=false;}
+var mb=document.getElementById('mute');
+mb.onclick=function(){if(playing){stopMusic();mb.style.opacity=.5}else{startMusic();mb.style.opacity=1}};
+document.getElementById('openBtn').onclick=function(){
+ var i=document.getElementById('intro');i.classList.add('open');startMusic();
+ mb.classList.add('on');setTimeout(function(){i.classList.add('gone')},1100);};
+</script>
+</body>
+</html>
